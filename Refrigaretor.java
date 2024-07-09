@@ -1,4 +1,4 @@
-class Bluetooth{
+class Refrigaretor{
 	
    static boolean isConnected = false ;
  
@@ -8,10 +8,10 @@ class Bluetooth{
    
        if (isConnected == false){
        isConnected = true ;
-	   System.out.println("The Bluetooth is Turned  on...");
+	   System.out.println("The Refrigaretor is Turned  on...");
 	   } else if(isConnected == true){   
 	   isConnected = false ;
-	   System.out.println("The Bluetooth is Turned off...");
+	   System.out.println("The Refrigaretor is Turned off...");
 	    System.out.println("end of onOrOff");
 	   }
     return isConnected;
