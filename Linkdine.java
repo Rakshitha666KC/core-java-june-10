@@ -1,7 +1,6 @@
-class PassportGeneration{
+class LinkdineGeneration{
         
-	    static String cpvLoc ;
-		static String dcdrLoc ;
+	    
 		static String firstName ;
 		static String lastName ;
 		static String dateOfBirth ;
@@ -10,17 +9,13 @@ class PassportGeneration{
 		static String Id ;
 		static String password ;
 		static String confirmPassword ;
-		static String hintQuestion ;
-		static String hintAnswer ;
-		static String confirmCaptcha ;
-		
+        static String Resume;
+
 		
 	//Create Operation
-    public static boolean createUserPassport(String cpvLocation, String dcdrLocation, String givenName, String surName, String dob, String email, boolean isEmailLoginSame, String loginId, String pwd, String confirmPwd,String hintQues, String hintAns, String captcha){
+    public static boolean createUserLinkdine( String givenName, String surName, String dob, String email, boolean isEmailLoginSame, String loginId, String pwd, String confirmPwd,String Resume){
 	
-	    boolean isPassportCreated = false ;
-		boolean isCpvLocationValid = false ;
-		boolean isDcdrLocationValid = false ;
+	    boolean isLinkdineCreated = false ;
 		boolean isGivenNameValid = false ;
 		boolean isSurNameValid = false ;
 		boolean isDobValid = false ;
@@ -29,24 +24,10 @@ class PassportGeneration{
 		boolean isLoginIdValid = false ;
 		boolean isPwdValid = false ;
 		boolean isConfirmPwdValid = false ;
-		boolean isHintQuesValid = false ;
-		boolean isHintAnsValid = false ;
-		boolean isCaptchaValid = false ;
+		boolean isResumeValid = false ;
 		
 		//validation  //  null check 
-		    if(cpvLocation != null){
-				cpvLoc = cpvLocation ;
-				isCpvLocationValid = true ;
-            }
-			else
-				System.out.println("CPV Location is InValid");
-		    
-			if(dcdrLocation != null){
-			    dcdrLoc = dcdrLocation ;
-				isDcdrLocationValid = true ;
-			}
-			else
-				System.out.println("DCDR Location is Invalid");
+		   
 			
 			if(givenName != null){
 				firstName = givenName ;
@@ -104,46 +85,30 @@ class PassportGeneration{
 			else
 				System.out.println("Confirm Password is Invalid");
 			
-			if(hintQues != null){
-				hintQuestion = hintQues ;
-				isHintQuesValid = true ;
+			if(Resume != null){
+				confirmResume = Resume ;
+				isResumeValid = true ;
 			}
 			else
-				System.out.println("Hint Question is Invalid");
-			
-			if(hintAns != null){
-				hintAnswer = hintAns ;
-				isHintAnsValid = true ;
-			}
-			else
-				System.out.println("Hint Answer is Invalid");
-			
-			if(captcha != null){
-				confirmCaptcha = captcha ;
-				isCaptchaValid = true ;
-			}
-			else
-				System.out.println("Captcha Invalid");
+				System.out.println("Resume Invalid");
 			
 		    
 			
 			if(isCpvLocationValid == true && isDcdrLocationValid == true && isGivenNameValid == true && isSurNameValid == true && isDobValid == true && isEmailValid == true && isisEmailLoginSameValid == true && isLoginIdValid == true && isPwdValid == true && isConfirmPwdValid == true && isHintQuesValid == true && isHintAnsValid == true && isCaptchaValid == true)
-			isPassportCreated = true ;
+			isLinkdineCreated = true ;
 		
 		
 		
 		
 		
 		
-		return isPassportCreated;
+		return isLinkdineCreated;
 	}
     
-	public static void readUserPassportDetails(){
+	public static void readUserLinkdineDetails(){
 		
 		 
-		System.out.println("fetching... User Details...");
-		System.out.println("The User CPV Location is :" + cpvLoc);
-		System.out.println("The User DCDR Location is :" + dcdrLoc);
+			System.out.println("The User DCDR Location is :" + dcdrLoc);
         System.out.println("The User Given Name is :" + firstName);
         System.out.println("The User Sur Name is :" + lastName);		
 		System.out.println("The User Date of Birth is :" + dateOfBirth);
@@ -152,9 +117,7 @@ class PassportGeneration{
 		System.out.println("The USer Login ID is:" + emailId);
 		System.out.println("The USer Password is:" + password);
 		System.out.println("The User will Confirm the Password is :" + confirmPassword);
-		System.out.println("The User Hint Question is :" + hintQuestion);
-		System.out.println("The User Hint Answer is :" + hintAnswer);
-		System.out.println("THe User Passport Captcha is :" + confirmCaptcha);
+		System.out.println("The User Resume is :" + Resume);
 		
 		
 	}
